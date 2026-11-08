@@ -940,13 +940,17 @@ jmhwang@DESKTOP-G3J6LO3:~/projects$ git remote add origin https://github.com/yog
 
 ### 8. 연동 증거 스크린샷
 
-#### 1) VSCode 계정 아이콘에 내 GitHub 계정이 보이는 화면
+#### 1) VSCode 계정 아이콘에 내 GitHub 계정이 보이는 화면(로그인성공)
 
 ![VSCode연동완료](./evidence/screenshots/vscode_github4.png)
 
-#### 2) VSCode 소스 제어에 커밋 기록이 보이는 화면
+#### 2) VSCode 소스 제어에 커밋 기록이 보이는 화면(버전관리동작)
 
-![VSCode커밋](./evidence/screenshots/vscode_commit.png)
+![VSCode커밋](./evidence/screenshots/vscode_commit1.png)
+
+#### 3) GitHub 저장소 웹페이지 (파일이 올라간 모습, 주소창 포함)	
+
+![GitHub업로드완료](./evidence/screenshots/vscode_commit2.png)
 
 ## 14. 보안 및 개인정보 보호 점검
 
