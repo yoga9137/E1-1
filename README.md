@@ -886,7 +886,7 @@ jmhwang@DESKTOP-G3J6LO3:~/projects$ git config --list > ~/projects/evidence/logs
 
 - "code ." 하면 VS Code가 WSL에 연결된 상태로 열림. VS Code 왼쪽 아래에 WSL: Ubuntu 라고 표시되면 성공!
 
-- 윈도우에서 VS Code 탐색기 창으로 파일을 복사, 붙여넣기 가능함
+- 윈도우에서 VS Code 탐색기 창으로 파일을 복사, 붙여넣기 가능함, 드래그 & 드롭은 안됨.
 
 ```bash
 # WSL 터미널에서 프로젝트 폴더로 이동 후, 명령
@@ -921,8 +921,11 @@ jmhwang@DESKTOP-G3J6LO3:~/projects$ code .
 
 왼쪽 소스 제어 아이콘(가지 모양) 클릭
 "Initialize Repository" 클릭
+
 변경 파일에 + 로 스테이징 → 커밋 메시지 입력 → ✓ 커밋
+
 "Publish Branch" 클릭 → GitHub에 새 저장소로 올라감
+
 Public/Private 선택 (연습이면 Private 추천)
 
 #### 방법 B: 터미널로 (원리 이해용)
@@ -964,13 +967,17 @@ jmhwang@DESKTOP-G3J6LO3:~/projects/evidence/logs$ grep -ri -E "password|passwd|t
 jmhwang@DESKTOP-G3J6LO3:~/projects/evidence/logs$
 ```
 
-## 15. 트러블슈팅  
+## 15. 트러블 슈팅 
 
-문제 1. VS Code 에서 깃허브 저장소와 연동할 때 오류 발생  
+### - _**핵심 : 현재 작업 위치(윈도우, WSL, VS Code)를 정확히 파악하고 작업할 것**_
+
+### 문제 1. VS Code 에서 깃허브 저장소와 연동할 때 오류 발생 (_**작업위치: 윈도우 환경**_)
   
 문제  
+```bash
 PS C:\Workspace\E1_1> git clone <https://github.com/yoga9137/AI_E1-1.git> .
 fatal: destination path '.' already exists and is not an empty directory.  
+```
 
 원인 가설  
 git clone 명령어는 지정한 대상 경로(여기서는 .으로 표현된 현재 디렉터리)가 완전히 빈 디렉터리여야만 실행됨.  
@@ -978,6 +985,8 @@ git clone 명령어는 지정한 대상 경로(여기서는 .으로 표현된 �
 
 해결  
 C:\Workspace 폴더 내부의 E1_1 폴더를 삭제한 후, 다시 명령을 실행했다.  
+
+```bash
 PS C:\Workspace> git config --global user.name yoga9137
 PS C:\Workspace> git config --global user.email <yoga9137@gmail.com>  
 PS C:\Workspace> git clone <https://github.com/yoga9137/AI_E1-1.git> .  
@@ -989,9 +998,12 @@ remote: Total 70 (delta 19), reused 0 (delta 0), pack-reused 0 (from 0)
 Receiving objects: 100% (70/70), 22.77 KiB | 5.69 MiB/s, done.  
 Resolving deltas: 100% (19/19), done.  
 PS C:\Workspace>  
+```
 
-문제 2. VS Code 에서 깃허브로 Readme.md 파일을 업로드할 때 오류 발생  
+### 문제 2. VS Code 에서 깃허브로 Readme.md 파일을 업로드할 때 오류 발생 (_**윈도우 환경**_)
+
 문제  
+```bash
 PS C:\Workspace\E1-1> git push origin main  
 To <https://github.com/yoga9137/AI_E1-1.git>  
  ! [rejected]        main -> main (non-fast-forward)  
@@ -1000,6 +1012,7 @@ hint: Updates were rejected because the tip of your current branch is behind
 hint: its remote counterpart. If you want to integrate the remote changes,  
 hint: use 'git pull' before pushing again.  
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.  
+```
 
 원인 가설  
 원격 깃허브 저장소(Remote)와 내 컴퓨터(Local)의 소스코드가 서로 동기화되지 않아서 발생한 push 거부 오류.  
@@ -1012,8 +1025,11 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 > git push origin main --force 또는
 > git push origin main --f  
 
-문제 3. 방법1. 을 사용할 경우, 아래의 오류 메시지 발생  
-문제  
+### 문제 3. 방법1. 을 사용할 경우, 아래의 오류 메시지 발생(_**윈도우 환경**_)
+
+문제 
+
+```bash
 PS C:\Workspace\E1-1> git pull origin main --allow-unrelated-histories  
 remote: Enumerating objects: 11, done.  
 remote: Counting objects: 100% (11/11), done.  
@@ -1028,6 +1044,7 @@ error: Your local changes to the following files would be overwritten by merge:
         README.md  
 Please commit your changes or stash them before you merge.  
 Aborting  
+```
 
 원인 가설  
 내 컴퓨터의 README.md 파일에 아직 커밋(저장)하지 않은 수정 내용이 남아있기 때문에 발생함.  
@@ -1063,16 +1080,88 @@ Git이 안전을 위해 작업을 중단(Aborting)시킨 것.
 > git reset --hard HEAD  
 > git pull origin main  
 
-## 부록 A. AI 질문 (모델: GPT-5.5)
+### 문제 4. VS Code 에서 깃허브 저장소와 연동할 때 오류 발생 (_**윈도우 환경**_)
 
-질문1  
-\- 1. 미션 소개, 2. 최종 결과물 내용을 붙여넣음.  
+문제
+```bash
+jmhwang@DESKTOP-G3J6LO3:~/projects$ git remote add origin https://github.com/yoga9137/E1-1.git
+error: remote origin already exists.
+```
 
-질문2  
-\- 4. 기능 요구 사항 내용을 붙여넣고 "위의 미션은 4. 기능 요구 사항을 만족해야된다고 하는데...  
-  이러한 요구 사항을 만족하도록 최종 결과물을 어떻게 만들면 되는지 절차적으로 다시 설명해줘." 라고 요청함.
-  
-## 부록 B. 참고 내용  
+원인 가설  
+현재 WSL의 ~/projects 폴더에 이미 origin이라는 이름으로 연결된 깃허브 주소가 존재하기 때문에 발생한 것
+
+해결  
+
+방법 1: 기존 연결을 새 주소로 바꾸기 (가장 간단)
+
+기존에 등록된 origin을 유지한 채 원격 저장소 주소만 덮어씁니다
+
+> git remote set-url origin https://github.com/yoga9137/E1-1.git
+
+
+방법 2: 기존 연결을 지우고 새로 등록하기
+
+기존 origin 연결을 완전히 삭제한 후 처음부터 다시 등록하는 방법입니다.
+
+```bash
+# 1. 기존 origin 연결 삭제
+git remote remove origin
+
+# 2. 새 깃허브 주소로 다시 연결
+git remote add origin https://github.com/yoga9137/E1-1.git
+
+# 연결된 주소 최종 확인 (yoga9137/E1-1.git이 나오면 성공)
+git remote -v
+```
+
+### 5.
+
+문제
+```bash
+jmhwang@DESKTOP-G3J6LO3:~/projects$ git push -u origin main
+To https://github.com/yoga9137/E1-1.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/yoga9137/E1-1.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+
+원인 가설  
+깃허브(원격 저장소)에 이미 파일이 존재하기 때문에 발생한 것
+
+해결  
+
+방법 1: 원격 파일과 내 파일 합친 후 올리기 (안전함 ⭐️)
+
+깃허브에 있는 최신 파일들을 내 WSL 환경으로 가져와(Pull) 동기화한 뒤 다시 올리는 방식. 서로 다른 내역을 합치기 위해 --allow-unrelated-histories 옵션이 필요함.
+단, 파일 내용이 겹치는 충돌이 발생할 가능성있음.
+
+```bash
+# 1. 깃허브의 변경 내용을 가져와서 합치기
+git pull origin main --allow-unrelated-histories
+
+# 2. 합쳐진 상태를 다시 장바구니에 담고 커밋
+git add .
+git commit -m "깃허브 원격 코드와 로컬 코드 병합"
+
+# 3. 다시 깃허브로 업로드
+git push -u origin main
+```
+
+방법 2: 내 WSL 코드로 깃허브 덮어쓰기 (강제 푸시)
+
+만약 현재 깃허브 리포지토리에 들어있는 파일들(README.md, evidence/)이 중요하지 않고, 현재 내 WSL(~/projects)에 있는 파일들로 원격 저장소를 완전히 대체(덮어쓰기)하고 싶다면 강제로 밀어 넣을 수 있음.
+
+```bash
+# 깃허브 저장소를 내 현재 로컬 코드로 강제 업로드
+git push -u origin main --force
+```
+
+## 부록 A. 참고 내용  
 
 \- VS Code 에서 Commit 버튼을 누르기 전에 바로 위의 Message 에 수정한 내용을 꼭 넣을 것.
 \- 4. 터미널 조작 로그를 테스트하려면 VS Code -> Terminal -> New Terminal ->  
