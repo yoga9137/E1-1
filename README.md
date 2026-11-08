@@ -913,17 +913,40 @@ jmhwang@DESKTOP-G3J6LO3:~/projects$ code .
 
 #### 3) VSCode로 돌아오면 연동 완료
 
-![](./evidence/screenshots/vscode_github4.png)
+![VSCode연동완료](./evidence/screenshots/vscode_github4.png)
 
 ### 7. 저장소 생성 & 연동 (push)
 
+#### 방법 A: VS Code에서 바로 (쉬움, 추천)
 
+왼쪽 소스 제어 아이콘(가지 모양) 클릭
+"Initialize Repository" 클릭
+변경 파일에 + 로 스테이징 → 커밋 메시지 입력 → ✓ 커밋
+"Publish Branch" 클릭 → GitHub에 새 저장소로 올라감
+Public/Private 선택 (연습이면 Private 추천)
 
+#### 방법 B: 터미널로 (원리 이해용)
+
+```bash
+jmhwang@DESKTOP-G3J6LO3:~/projects$ git init
+Reinitialized existing Git repository in /home/jmhwang/projects/.git/
+jmhwang@DESKTOP-G3J6LO3:~/projects$ git add .
+jmhwang@DESKTOP-G3J6LO3:~/projects$ git commit -m "Github  first commit"
+[main 54f8f4c] Github first commit
+ 1 file changed, 3 insertions(+)
+jmhwang@DESKTOP-G3J6LO3:~/projects$ git branch -M main
+jmhwang@DESKTOP-G3J6LO3:~/projects$ git remote add origin https://github.com/yoga9137/E1-1.git
+```
 
 ### 8. 연동 증거 스크린샷
 
+#### 1) VSCode 계정 아이콘에 내 GitHub 계정이 보이는 화면
 
+![VSCode연동완료](./evidence/screenshots/vscode_github4.png)
 
+#### 2) VSCode 소스 제어에 커밋 기록이 보이는 화면
+
+![VSCode커밋](./evidence/screenshots/vscode_commit.png)
 
 ## 14. 보안 및 개인정보 보호 점검
 
