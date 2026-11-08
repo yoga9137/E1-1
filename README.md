@@ -839,6 +839,9 @@ jmhwang@DESKTOP-G3J6LO3:~/projects$
 ### 1. Git 설치 확인
 
 ```bash
+# Git 설치 (이미 설치되어 있다면 건너뛰어도 됨)
+jmhwang@DESKTOP-G3J6LO3:~$ apt update
+jmhwang@DESKTOP-G3J6LO3:~$ apt install git -y
 # WSL(Ubuntu) 터미널에서 git version 2.x.x 나오면 OK
 jmhwang@DESKTOP-G3J6LO3:~$ git --version
 git version 2.43.0
