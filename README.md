@@ -42,7 +42,7 @@
 ### [0] 작업 폴더 구성
 
 ```text
-projects/
+E1-1/
 ├─ app/
 ├─ evidence/
 │  ├─ screenshots/
@@ -53,8 +53,8 @@ projects/
 ### [1] 폴더 이동
 
 ```bash
-hcv70714678@GNIA-C202-A02:~$ cd projects     # 또는 cd projects/
-hcv70714678@GNIA-C202-A02:~/projects$
+hcv70714678@GNIA-C202-A02:~$ cd E1-1     # 또는 cd E1-1/
+hcv70714678@GNIA-C202-A02:~/E1-1$
 ```
 
 ### [2] 현재 폴더 위치 확인
@@ -63,13 +63,13 @@ pwd
 
 ```bash
 $ pwd
-/home/hcv70714678/projects
+/home/hcv70714678/E1-1
 ```
 
 ### [3] 숨김 파일까지 목록 확인
 
 ```bash
-hcv70714678@GNIA-C202-A02:~/projects$ ls -al
+hcv70714678@GNIA-C202-A02:~/E1-1$ ls -al
 total 20
 drwxr-xr-x 5 hcv70714678 hcv70714678 4096 Nov  4 20:11 .
 drwxr-x--- 5 hcv70714678 hcv70714678 4096 Nov  4 20:11 ..
@@ -77,7 +77,7 @@ drwxr-xr-x 7 hcv70714678 hcv70714678 4096 Nov  4 20:13 .git
 -rw-r--r-- 1 hcv70714678 hcv70714678    0 Nov  4 20:11 README.md
 drwxr-xr-x 2 hcv70714678 hcv70714678 4096 Nov  4 16:39 app
 drwxr-xr-x 4 hcv70714678 hcv70714678 4096 Nov  4 17:15 evidence
-hcv70714678@GNIA-C202-A02:~/projects$ ls -l
+hcv70714678@GNIA-C202-A02:~/E1-1$ ls -l
 total 8
 -rw-r--r-- 1 hcv70714678 hcv70714678    0 Nov  4 20:11 README.md
 drwxr-xr-x 2 hcv70714678 hcv70714678 4096 Nov  4 16:39 app
@@ -87,33 +87,33 @@ drwxr-xr-x 4 hcv70714678 hcv70714678 4096 Nov  4 17:15 evidence
 ### [4] 빈 파일 생성
 
 ```bash
-hcv70714678@GNIA-C202-A02:~/projects$ touch hello.txt
+hcv70714678@GNIA-C202-A02:~/E1-1$ touch hello.txt
 ```
 
 ### [5] 내용 쓰고 확인
 
 ```bash
-hcv70714678@GNIA-C202-A02:~/projects$ echo "Hello Test" > hello.txt
-hcv70714678@GNIA-C202-A02:~/projects$ cat hello.txt
+hcv70714678@GNIA-C202-A02:~/E1-1$ echo "Hello Test" > hello.txt
+hcv70714678@GNIA-C202-A02:~/E1-1$ cat hello.txt
 Hello Test
 ```
 
 ### [6] 복사
 
 ```bash
-hcv70714678@GNIA-C202-A02:~/projects$ cp hello.txt copy.txt
+hcv70714678@GNIA-C202-A02:~/E1-1$ cp hello.txt copy.txt
 ```
 
 ### [7] 이름 변경
 
 ```bash
-hcv70714678@GNIA-C202-A02:~/projects$ mv copy.txt renamed.txt
+hcv70714678@GNIA-C202-A02:~/E1-1$ mv copy.txt renamed.txt
 ```
 
 ### [8] 변경된 목록 확인
 
 ```bash
-hcv70714678@GNIA-C202-A02:~/projects$ ls -l
+hcv70714678@GNIA-C202-A02:~/E1-1$ ls -l
 total 16
 -rw-r--r-- 1 hcv70714678 hcv70714678    0 Nov  4 20:11 README.md
 drwxr-xr-x 2 hcv70714678 hcv70714678 4096 Nov  4 16:39 app
@@ -125,13 +125,13 @@ drwxr-xr-x 4 hcv70714678 hcv70714678 4096 Nov  4 17:15 evidence
 ### [9] 삭제
 
 ```bash
-hcv70714678@GNIA-C202-A02:~/projects$ rm renamed.txt
+hcv70714678@GNIA-C202-A02:~/E1-1$ rm renamed.txt
 ```
 
 ### [10] 최종 목록 확인
 
 ```bash
-hcv70714678@GNIA-C202-A02:~/projects$ ls -al
+hcv70714678@GNIA-C202-A02:~/E1-1$ ls -al
 total 24
 drwxr-xr-x 5 hcv70714678 hcv70714678 4096 Nov  4 20:24 .
 drwxr-x--- 5 hcv70714678 hcv70714678 4096 Nov  4 20:11 ..
@@ -147,7 +147,7 @@ drwxr-xr-x 4 hcv70714678 hcv70714678 4096 Nov  4 17:15 evidence
 ### [1] 현재 권한 확인 (hello.txt 파일)
 
 ```bash
-hcv70714678@GNIA-C202-A02:~/projects$ ls -l
+hcv70714678@GNIA-C202-A02:~/E1-1$ ls -l
 total 12
 -rw-r--r-- 1 hcv70714678 hcv70714678    0 Nov  4 20:11 README.md
 drwxr-xr-x 2 hcv70714678 hcv70714678 4096 Nov  4 16:39 app
@@ -158,8 +158,8 @@ drwxr-xr-x 4 hcv70714678 hcv70714678 4096 Nov  4 17:15 evidence
 ### [2] 권한 변경(예: 소유자만 읽기/쓰기, 그룹/기타는 읽기 전용 -> 644)
 
 ```bash
-hcv70714678@GNIA-C202-A02:~/projects$ chmod 644 hello.txt
-hcv70714678@GNIA-C202-A02:~/projects$ ls -l
+hcv70714678@GNIA-C202-A02:~/E1-1$ chmod 644 hello.txt
+hcv70714678@GNIA-C202-A02:~/E1-1$ ls -l
 total 12
 -rw-r--r-- 1 hcv70714678 hcv70714678    0 Nov  4 20:11 README.md
 drwxr-xr-x 2 hcv70714678 hcv70714678 4096 Nov  4 16:39 app
@@ -171,8 +171,8 @@ drwxr-xr-x 4 hcv70714678 hcv70714678 4096 Nov  4 17:15 evidence
 
 ```bash
 # 디렉토리 생성
-hcv70714678@GNIA-C202-A02:~/projects$ mkdir test_dir
-hcv70714678@GNIA-C202-A02:~/projects$ ls -l
+hcv70714678@GNIA-C202-A02:~/E1-1$ mkdir test_dir
+hcv70714678@GNIA-C202-A02:~/E1-1$ ls -l
 total 16
 -rw-r--r-- 1 hcv70714678 hcv70714678    0 Nov  4 20:11 README.md
 drwxr-xr-x 2 hcv70714678 hcv70714678 4096 Nov  4 16:39 app
@@ -180,8 +180,8 @@ drwxr-xr-x 4 hcv70714678 hcv70714678 4096 Nov  4 17:15 evidence
 -rw-r--r-- 1 hcv70714678 hcv70714678   11 Nov  4 20:20 hello.txt
 drwxr-xr-x 2 hcv70714678 hcv70714678 4096 Nov  4 20:42 test_dir
 # 디렉토리 권한변경
-hcv70714678@GNIA-C202-A02:~/projects$ chmod 644 test_dir/
-hcv70714678@GNIA-C202-A02:~/projects$ ls -ld test_dir/
+hcv70714678@GNIA-C202-A02:~/E1-1$ chmod 644 test_dir/
+hcv70714678@GNIA-C202-A02:~/E1-1$ ls -ld test_dir/
 drw-r--r-- 2 hcv70714678 hcv70714678 4096 Nov  4 20:42 test_dir/
 ```
 
@@ -220,12 +220,12 @@ drw-r--r-- 2 hcv70714678 hcv70714678 4096 Nov  4 20:42 test_dir/
 Ubuntu 터미널을 열고 다음 명령어를 실행
 
 ```bash
-hcv70714678@GNIA-C202-A02:~/projects$ docker --version
+hcv70714678@GNIA-C202-A02:~/E1-1$ docker --version
 Docker version 29.9.2, build a82e528
 ```
 
 ```bash
-hcv70714678@GNIA-C202-A02:~/projects$ docker run hello-world
+hcv70714678@GNIA-C202-A02:~/E1-1$ docker run hello-world
 permission denied while trying to connect to the docker API at unix:///var/run/docker.sock
 ```
 
@@ -233,18 +233,18 @@ permission denied while trying to connect to the docker API at unix:///var/run/d
 따라서 관리자 권한으로 다시 실행하거나, chmod 명령어를 이용해서 docker.sock 파일 접근 권한을 변경한 후, 다시 실행하면 됨.
 
 ```bash
-hcv70714678@GNIA-C202-A02:~/projects$ sudo docker run hello-world
+hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker run hello-world
 ```
 
 ### [4] Ubuntu 에서 Docker 기본 점검
 
 ```bash
 # 버전 확인
-hcv70714678@GNIA-C202-A02:~/projects$ sudo docker --version
+hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker --version
 Docker version 29.9.2, build a82e528
 
 # 데몬 동작 확인
-hcv70714678@GNIA-C202-A02:~/projects$ sudo docker info
+hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker info
 Client:
  Version:    29.9.2
  Context:    default
@@ -259,7 +259,7 @@ Server:
  ... 
 
 # hello-world 컨테이너 구동 테스트
-hcv70714678@GNIA-C202-A02:~/projects$ sudo docker run hello-world
+hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker run hello-world
 
 Hello from Docker!
 This message shows that your installation appears to be working correctly.
@@ -292,7 +292,7 @@ Docker 이미지를 원격 저장소(Docker Hub)에서 다운로드하고 로컬
 \- 이미지 다운로드 (Nginx 가벼운 웹 서버 이미지를 로컬에 다운로드)
 
 ```bash
-hcv70714678@GNIA-C202-A02:~/projects$ sudo docker pull nginx:alpine
+hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker pull nginx:alpine
 alpine: Pulling from library/nginx
 657023555a2a: Pull complete
 b9b388a21ecf: Pull complete
@@ -312,13 +312,13 @@ docker.io/library/nginx:alpine
 \- 로컬 이미지 목록 확인 (방금 다운로드한 `nginx`를 포함해 시스템에 저장된 모든 이미지의 목록, 태그, 이미지 ID, 크기가 표시)
 
 ```bash
-hcv70714678@GNIA-C202-A02:~/projects$ sudo docker images
+hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker images
                                                                                                     i Info →   U  In Use
 IMAGE                ID             DISK USAGE   CONTENT SIZE   EXTRA
 hello-world:latest   c567b231f656       25.9kB         9.49kB    U
 nginx:alpine         785835ea65db       94.5MB         27.2MB
 ubuntu:latest        6a06111c3b0a        163MB         45.9MB    U
-hcv70714678@GNIA-C202-A02:~/projects$
+hcv70714678@GNIA-C202-A02:~/E1-1$
 ```
 
 ### [2] 컨테이너 관련 명령 (실행, 중지, 목록 확인)
@@ -328,9 +328,9 @@ hcv70714678@GNIA-C202-A02:~/projects$
 \- 컨테이너 실행
 
 ```bash
-hcv70714678@GNIA-C202-A02:~/projects$ sudo docker run -d --name my-nginx-container -p 8080:80 nginx:alpine
+hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker run -d --name my-nginx-container -p 8080:80 nginx:alpine
 a8286d2b8c850a0fccfaf38284b40c7a92b9bd7b65040176695324080f765143
-hcv70714678@GNIA-C202-A02:~/projects$
+hcv70714678@GNIA-C202-A02:~/E1-1$
 ```
 
 - `-d`: 백그라운드(Detached 모드)에서 실행
@@ -341,40 +341,40 @@ hcv70714678@GNIA-C202-A02:~/projects$
 \- 실행 중인 컨테이너 목록 확인 (현재 구동 중인 컨테이너들의 ID, 이미지, 포트 매핑 상태가 표시)
 
 ```bash
-hcv70714678@GNIA-C202-A02:~/projects$ sudo docker ps
+hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker ps
 CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS                                     NAMES
 a8286d2b8c85   nginx:alpine   "/docker-entrypoint.…"   2 minutes ago   Up 2 minutes   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   my-nginx-container
-hcv70714678@GNIA-C202-A02:~/projects$
+hcv70714678@GNIA-C202-A02:~/E1-1$
 ```
 
 \- 모든 컨테이너 목록 확인(정지된 컨테이너를 포함해 생성된 적이 있는 모든 컨테이너의 이력을 확인)
 
 ```bash
-hcv70714678@GNIA-C202-A02:~/projects$ sudo docker ps -a
+hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker ps -a
 CONTAINER ID   IMAGE           COMMAND                  CREATED          STATUS                      PORTS                                     NAMES
 a8286d2b8c85   nginx:alpine    "/docker-entrypoint.…"   4 minutes ago    Up 4 minutes                0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   my-nginx-container
 3cd9c4847b6a   ubuntu:latest   "/bin/bash"              41 minutes ago   Exited (0) 28 minutes ago                                             pedantic_chandrasekhar
 d0e60747fc90   hello-world     "/hello"                 45 minutes ago   Exited (0) 45 minutes ago                                             compassionate_heyrovsky
 dfee37b96fe7   hello-world     "/hello"                 54 minutes ago   Exited (0) 54 minutes ago                                             awesome_sutherland
-hcv70714678@GNIA-C202-A02:~/projects$
+hcv70714678@GNIA-C202-A02:~/E1-1$
 ```
 
 \- 컨테이너 중지 (_검증:_ `docker ps` 명령을 다시 실행했을 때 해당 컨테이너가 목록에서 사라지면 정상 중지된 것)
 
 ```bash
-hcv70714678@GNIA-C202-A02:~/projects$ sudo docker stop my-nginx-container
+hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker stop my-nginx-container
 my-nginx-container
-hcv70714678@GNIA-C202-A02:~/projects$ sudo docker ps
+hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker ps
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
-hcv70714678@GNIA-C202-A02:~/projects$
+hcv70714678@GNIA-C202-A02:~/E1-1$
 ```
 
 \- 중지된 컨테이너 삭제
 
 ```bash
-hcv70714678@GNIA-C202-A02:~/projects$ sudo docker rm my-nginx-container
+hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker rm my-nginx-container
 my-nginx-container
-hcv70714678@GNIA-C202-A02:~/projects$
+hcv70714678@GNIA-C202-A02:~/E1-1$
 ```
 
 ### [3] 운영 및 모니터링 명령(로그 및 리소스 확인)
@@ -385,7 +385,7 @@ hcv70714678@GNIA-C202-A02:~/projects$
 
 ```bash
 # 컨테이너 내부의 실시간 접속 로그 확인
-hcv70714678@GNIA-C202-A02:~/projects$ sudo docker logs my-nginx-container
+hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker logs my-nginx-container
 /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
 /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
 /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh ...
@@ -395,10 +395,10 @@ hcv70714678@GNIA-C202-A02:~/projects$ sudo docker logs my-nginx-container
 \- 컨테이너 리소스 사용량 확인(현재 실행 중인 모든 컨테이너의 CPU 사용률, 메모리 사용량 및 제한치가 실시간 스냅샷 형태로 출력)
 
 ```bash
-hcv70714678@GNIA-C202-A02:~/projects$ sudo docker stats --no-stream
+hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker stats --no-stream
 CONTAINER ID   NAME                 CPU %     MEM USAGE / LIMIT     MEM %     NET I/O         BLOCK I/O     PIDS
 f16d0dbe2818   my-nginx-container   0.00%     20.54MiB / 15.25GiB   0.13%     1.74kB / 698B   0B / 12.3kB   25
-hcv70714678@GNIA-C202-A02:~/projects$
+hcv70714678@GNIA-C202-A02:~/E1-1$
 ```
 
 ### [4] 실습 후, 컨테이너 정리
@@ -406,13 +406,13 @@ hcv70714678@GNIA-C202-A02:~/projects$
 \- 실습을 마친 후 테스트용 컨테이너를 깔끔하게 정리하려면 아래 명령을 사용
 
 ```bash
-hcv70714678@GNIA-C202-A02:~/projects$ sudo docker stop my-nginx-container
+hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker stop my-nginx-container
 my-nginx-container
-hcv70714678@GNIA-C202-A02:~/projects$ sudo docker rm my-nginx-container
+hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker rm my-nginx-container
 my-nginx-container
-hcv70714678@GNIA-C202-A02:~/projects$ sudo docker ps
+hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker ps
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
-hcv70714678@GNIA-C202-A02:~/projects$
+hcv70714678@GNIA-C202-A02:~/E1-1$
 ```
 
 ## 8. 컨테이너 실행 실습
@@ -421,7 +421,7 @@ hcv70714678@GNIA-C202-A02:~/projects$
 
 ```bash
 # hello-world 컨테이너 구동 테스트
-hcv70714678@GNIA-C202-A02:~/projects$ sudo docker run hello-world
+hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker run hello-world
 
 Hello from Docker!
 This message shows that your installation appears to be working correctly.
@@ -449,7 +449,7 @@ For more examples and ideas, visit:
 
 ```bash
 # 이 명령어는 Docker를 이용해 Ubuntu 컨테이너를 생성하고, 그 컨테이너 내부의 Bash 터미널에 직접 접속하는 명령어. 쉽게 말하면, 현재 Ubuntu 안에서 Docker를 통해 새로운 Ubuntu를 하나 더 실행하는 명령어.
-hcv70714678@GNIA-C202-A02:~/projects$ sudo docker run -it ubuntu:latest /bin/bash
+hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker run -it ubuntu:latest /bin/bash
 Unable to find image 'ubuntu:latest' locally
 latest: Pulling from library/ubuntu
 f3f25b84a7d7: Pull complete
@@ -466,7 +466,7 @@ Hello World
 # 컨테이너 내부 Bash에서 빠져나와 기존 WSL Ubuntu 터미널로 돌아감
 root@3cd9c4847b6a:/# exit
 exit
-hcv70714678@GNIA-C202-A02:~/projects$
+hcv70714678@GNIA-C202-A02:~/E1-1$
 ```
 
 | 명령어 | 의미 |
@@ -487,10 +487,10 @@ hcv70714678@GNIA-C202-A02:~/projects$
 
 ```bash
 # 백그라운드로 우분투 무한 대기 컨테이너 실행
-hcv70714678@GNIA-C202-A02:~/projects$ sudo docker run -d --name my-ubuntu ubuntu:latest sleep 3600
+hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker run -d --name my-ubuntu ubuntu:latest sleep 3600
 466ec95831ea1bc9edb0a8822f4599637cb7130bf1305ff2c4faefbdac707da0
 # attach로 접속
-hcv70714678@GNIA-C202-A02:~/projects$ sudo docker attach my-ubuntu
+hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker attach my-ubuntu
 ```
 
 - **관찰 및 주의점:**
@@ -503,11 +503,11 @@ hcv70714678@GNIA-C202-A02:~/projects$ sudo docker attach my-ubuntu
 
 ```bash
 # 백그라운드로 우분투 무한 대기 컨테이너 실행
-hcv70714678@GNIA-C202-A02:~/projects$ sudo docker run -d --name my-ubuntu ubuntu:latest sleep 3600
+hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker run -d --name my-ubuntu ubuntu:latest sleep 3600
 466ec95831ea1bc9edb0a8822f4599637cb7130bf1305ff2c4faefbdac707da0
 
 # exec로 새로운 bash 셸을 실행하며 접속
-hcv70714678@GNIA-C202-A02:~/projects$ sudo docker exec -it my-ubuntu /bin/bash
+hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker exec -it my-ubuntu /bin/bash
 root@466ec95831ea:/# ls -l
 ```
 
@@ -566,7 +566,7 @@ COPY index.html /usr/share/nginx/html/index.html
 
 # [커스텀2] 메타 정보용 라벨 추가
 LABEL maintainer="student" \
-      description="Custom NGINX for projects"
+      description="Custom NGINX for E1-1"
 
 # [커스텀3] 노출 포트 명시
 EXPOSE 80
@@ -589,18 +589,18 @@ HEALTHCHECK --interval=30s --timeout=3s \
 
 ```bash
 # -t: 이미지 이름:태그 지정, 마지막 "." 은 현재 폴더의 Dockerfile 사용.
-hcv70714678@GNIA-C202-A06:~/projects/app$ docker build -t my-nginx:1.0 .
+hcv70714678@GNIA-C202-A06:~/E1-1/app$ docker build -t my-nginx:1.0 .
  => => naming to docker.io/library/my-nginx:1.0     0.0s
  => => unpacking to docker.io/library/my-nginx:1.0
 
 # 빌드된 이미지 확인
-hcv70714678@GNIA-C202-A06:~/projects/app$ docker images
+hcv70714678@GNIA-C202-A06:~/E1-1/app$ docker images
 IMAGE                ID             DISK USAGE   CONTENT SIZE   EXTRA
 hello-world:latest   c567b231f656       25.9kB         9.49kB    U   
 my-nginx:1.0         e7d7534b9859       73.6MB           21MB        
 nginx:alpine         785835ea65db       94.5MB         27.2MB    U   
 ubuntu:latest        6a06111c3b0a        163MB         45.9MB    U   
-hcv70714678@GNIA-C202-A06:~/projects/app$ 
+hcv70714678@GNIA-C202-A06:~/E1-1/app$ 
 ```
 
 ## 10. 포트 매핑 및 접속 증거
@@ -609,9 +609,9 @@ hcv70714678@GNIA-C202-A06:~/projects/app$
 
 ```bash
 # -d: 백그라운드, --name: 컨테이너 이름, -p: 호스트8080 -> 컨테이너80
-hcv70714678@GNIA-C202-A06:~/projects/app$ docker run -d --name my-nginx-web -p 8080:80 my-nginx:1.0 
+hcv70714678@GNIA-C202-A06:~/E1-1/app$ docker run -d --name my-nginx-web -p 8080:80 my-nginx:1.0 
 ea5daf959d7556d5dc4a880f9ffdda8a45bb9eddc8b0117e01b883193eab9c1f
-hcv70714678@GNIA-C202-A06:~/projects/app$ docker ps
+hcv70714678@GNIA-C202-A06:~/E1-1/app$ docker ps
 CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                             PORTS                                     NAMES
 d618517c1e82   my-nginx:1.0   "/docker-entrypoint.…"   22 seconds ago   Up 21 seconds (health: starting)   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   my-nginx-web
 ```
@@ -625,7 +625,7 @@ d618517c1e82   my-nginx:1.0   "/docker-entrypoint.…"   22 seconds ago   Up 21 
 
 ```bash
 # 터미널에서 응답 확인
-hcv70714678@GNIA-C202-A06:~/projects/app$ curl http://localhost:8080
+hcv70714678@GNIA-C202-A06:~/E1-1/app$ curl http://localhost:8080
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -637,7 +637,7 @@ hcv70714678@GNIA-C202-A06:~/projects/app$ curl http://localhost:8080
   <p>All In One mission1</p>
 </body>
 </html>
-hcv70714678@GNIA-C202-A06:~/projects/app$
+hcv70714678@GNIA-C202-A06:~/E1-1/app$
 ```
 
 \- 브라우저 접속 화면
@@ -687,27 +687,27 @@ Windows PC (호스트)
 
 ```bash
 # WSL 우분투 터미널에서
-# 예: /home/user/projects/app
-jmhwang@DESKTOP-G3J6LO3:~$ cd projects/app/
-jmhwang@DESKTOP-G3J6LO3:~/projects/app$ ls -l
+# 예: /home/user/E1-1/app
+jmhwang@DESKTOP-G3J6LO3:~$ cd E1-1/app/
+jmhwang@DESKTOP-G3J6LO3:~/E1-1/app$ ls -l
 total 4
 -rw-r--r-- 1 jmhwang jmhwang 253 Nov  7 23:08 index.html
-jmhwang@DESKTOP-G3J6LO3:~/projects/app$ docker run -d -p 8080:80 --name my-nginx-server -v "$(pwd)":/usr/share/nginx/html nginx:alpine
+jmhwang@DESKTOP-G3J6LO3:~/E1-1/app$ docker run -d -p 8080:80 --name my-nginx-server -v "$(pwd)":/usr/share/nginx/html nginx:alpine
 d033977debd399ecbb882233ddaba0b734e2748b191deadb69a56769aa40ff42
-jmhwang@DESKTOP-G3J6LO3:~/projects/app$
+jmhwang@DESKTOP-G3J6LO3:~/E1-1/app$
 ```
 
 \- 변경후
 
 ![바인드마운트_우분투](./evidence/screenshots/bind_mount(ubuntu2).png)
 
-- index.html 파일을 작성할때 projects/app 폴더에서 파일을 직접 작성하거나 **"code ."** 명령으로 VS Code 를 실행해서 파일을 작성하면됨.
+- index.html 파일을 작성할때 E1-1/app 폴더에서 파일을 직접 작성하거나 **"code ."** 명령으로 VS Code 를 실행해서 파일을 작성하면됨.
 
 ### 📌경우 2. Windows 경로 (`/mnt/c/...`)
 
 ```bash
 # Windows의 C 드라이브는 WSL에서 /mnt/c 로 보임
-jmhwang@DESKTOP-G3J6LO3:~/projects/app$ docker run -d -p 8080:80 --name my-nginx-server -v /mnt/c/Users/hcv70/projects/app:/usr/share/nginx/html nginx:alpine
+jmhwang@DESKTOP-G3J6LO3:~/E1-1/app$ docker run -d -p 8080:80 --name my-nginx-server -v /mnt/c/Users/hcv70/E1-1/app:/usr/share/nginx/html nginx:alpine
 0eb58e95a8c07b0b772242d22d3da44c8674ae48945c403a73738113650ee217
 ```
 
@@ -731,12 +731,12 @@ jmhwang@DESKTOP-G3J6LO3:~/projects/app$ docker run -d -p 8080:80 --name my-nginx
 ### 📁 Step 1. 도커가 관리하는 볼륨 생성
 
 ```bash
-jmhwang@DESKTOP-G3J6LO3:~/projects$ docker volume create my-data
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$ docker volume create my-data
 my-data
-jmhwang@DESKTOP-G3J6LO3:~/projects$ docker volume ls
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$ docker volume ls
 DRIVER    VOLUME NAME
 local     my-data
-jmhwang@DESKTOP-G3J6LO3:~/projects$
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$
 ```
 
 ### 📁 Step 2. 볼륨 연결 및 컨테이너 실행 + 데이터 쓰기
@@ -745,43 +745,43 @@ jmhwang@DESKTOP-G3J6LO3:~/projects$
 
 ```bash
 # 볼륨을 /data 에 연결 후 컨테이너 실행
-jmhwang@DESKTOP-G3J6LO3:~/projects$ docker run -d --name vol-demo -v my-data:/data alpine sleep 3600
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$ docker run -d --name vol-demo -v my-data:/data alpine sleep 3600
 f07e570591377c2c51ae5f611b678ccbc17233e21ae528c1f100b076c997b85a
-jmhwang@DESKTOP-G3J6LO3:~/projects$ docker ps
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$ docker ps
 CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                                     NAMES
 f07e57059137   alpine         "sleep 3600"             6 seconds ago    Up 6 seconds                                              vol-demo
 d033977debd3   nginx:alpine   "/docker-entrypoint.…"   54 minutes ago   Up 54 minutes   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   my-nginx-server
 # 볼륨 안에 파일 하나 만들기
-jmhwang@DESKTOP-G3J6LO3:~/projects$ docker exec vol-demo sh -c "echo 'persistent data' > /data/test.txt"
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$ docker exec vol-demo sh -c "echo 'persistent data' > /data/test.txt"
 # 파일 내용 확인
-jmhwang@DESKTOP-G3J6LO3:~/projects$ docker exec vol-demo cat /data/test.txt
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$ docker exec vol-demo cat /data/test.txt
 persistent data
-jmhwang@DESKTOP-G3J6LO3:~/projects$
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$
 ```
 
 ### 📁 Step 3. 컨테이너 삭제
 
 ```bash
 # vol-demo 컨테이너 삭제
-jmhwang@DESKTOP-G3J6LO3:~/projects$ docker rm -f vol-demo
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$ docker rm -f vol-demo
 vol-demo
 # vol-demo 컨테이너가 사라졌는지 확인
-jmhwang@DESKTOP-G3J6LO3:~/projects$ docker ps
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$ docker ps
 CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                                     NAMES
 d033977debd3   nginx:alpine   "/docker-entrypoint.…"   56 minutes ago   Up 56 minutes   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   my-nginx-server
-jmhwang@DESKTOP-G3J6LO3:~/projects
+jmhwang@DESKTOP-G3J6LO3:~/E1-1
 ```
 
 ### 📁 Step 4. 새 컨테이너에 같은 볼륨 연결 → 데이터 확인
 
 ```bash
 # 새로운 컨테이너 생성
-jmhwang@DESKTOP-G3J6LO3:~/projects$ docker run -d --name vol-demo2 -v my-data:/data alpine sleep 3600
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$ docker run -d --name vol-demo2 -v my-data:/data alpine sleep 3600
 337306166fe3852f5b82a647eb5330c89249b76134a88e163392d01e5018502e
 # 컨테이너를 지웠는데도 데이터는 살아있음!
-jmhwang@DESKTOP-G3J6LO3:~/projects$ docker exec vol-demo2 cat /data/test.txt
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$ docker exec vol-demo2 cat /data/test.txt
 persistent data
-jmhwang@DESKTOP-G3J6LO3:~/projects$
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$
 ```
 
 - 핵심 : 컨테이너는 바뀌었지만 볼륨 데이터는 그대로 유지됨.
@@ -789,7 +789,7 @@ jmhwang@DESKTOP-G3J6LO3:~/projects$
 ### 📁 Step 5. 볼륨의 실제 저장 위치 등 확인
 
 ```bash
-jmhwang@DESKTOP-G3J6LO3:~/projects$ docker volume inspect my-data
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$ docker volume inspect my-data
 [
     {
         "CreatedAt": "2026-11-07T15:20:58Z",
@@ -801,7 +801,7 @@ jmhwang@DESKTOP-G3J6LO3:~/projects$ docker volume inspect my-data
         "Scope": "local"
     }
 ]
-jmhwang@DESKTOP-G3J6LO3:~/projects$
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$
 ```
 
 ## 13. Git 설정 및 GitHub 연동
@@ -819,7 +819,7 @@ jmhwang@DESKTOP-G3J6LO3:~/projects$
 
    \- **WSL (Ubuntu) 환경에서 작업할 때 (권장)**
 
-   _프로젝트 파일을 WSL 내부 경로(예: ~/projects)에 위치시키고, VS Code의 터미널을 WSL: Ubuntu로 연결하여 Git 명령(git add, git commit, git push)을 일원화하는 것이 충돌을 방지하는 좋은 방법._
+   _프로젝트 파일을 WSL 내부 경로(예: ~/E1-1)에 위치시키고, VS Code의 터미널을 WSL: Ubuntu로 연결하여 Git 명령(git add, git commit, git push)을 일원화하는 것이 충돌을 방지하는 좋은 방법._
 
    \- Windows 환경에서 작업할 때
 
@@ -864,20 +864,20 @@ jmhwang@DESKTOP-G3J6LO3:~$
 
 ```bash
 # 이렇게 하면 앞으로 git init 할 때 기본 브랜치가 main으로 만들어짐
-jmhwang@DESKTOP-G3J6LO3:~/projects$ git config --global init.defaultBranch main
-jmhwang@DESKTOP-G3J6LO3:~/projects$
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$ git config --global init.defaultBranch main
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$
 ```
 
 ### 4. git config --list 로 확인 & 기록
 
 ```bash
 # 설정 정보 확인
-jmhwang@DESKTOP-G3J6LO3:~/projects$ git config --list
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$ git config --list
 user.name=yoga9137
 user.email=yoga9137@gmail.com
 init.defaultbranch=main
 # 로그 저장
-jmhwang@DESKTOP-G3J6LO3:~/projects$ git config --list > ~/projects/evidence/logs/git-config.log
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$ git config --list > ~/E1-1/evidence/logs/git-config.log
 ```
 
 ### 5. VSCode에서 WSL 폴더 열기
@@ -890,11 +890,11 @@ jmhwang@DESKTOP-G3J6LO3:~/projects$ git config --list > ~/projects/evidence/logs
 
 ```bash
 # WSL 터미널에서 프로젝트 폴더로 이동 후, 명령
-jmhwang@DESKTOP-G3J6LO3:~$ cd projects/
-jmhwang@DESKTOP-G3J6LO3:~/projects$ ls
+jmhwang@DESKTOP-G3J6LO3:~$ cd E1-1/
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$ ls
 README.md  app  evidence
 # WSL(Ubuntu)와 연동된 VS Code 실행
-jmhwang@DESKTOP-G3J6LO3:~/projects$ code .
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$ code .
 ```
 
 ![WSL연결된VSCode창](./evidence/screenshots/vscode_wsl.png)
@@ -931,14 +931,14 @@ Public/Private 선택 (연습이면 Private 추천)
 #### 방법 B: 터미널로 (원리 이해용)
 
 ```bash
-jmhwang@DESKTOP-G3J6LO3:~/projects$ git init
-Reinitialized existing Git repository in /home/jmhwang/projects/.git/
-jmhwang@DESKTOP-G3J6LO3:~/projects$ git add .
-jmhwang@DESKTOP-G3J6LO3:~/projects$ git commit -m "Github  first commit"
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$ git init
+Reinitialized existing Git repository in /home/jmhwang/E1-1/.git/
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$ git add .
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$ git commit -m "Github  first commit"
 [main 54f8f4c] Github first commit
  1 file changed, 3 insertions(+)
-jmhwang@DESKTOP-G3J6LO3:~/projects$ git branch -M main
-jmhwang@DESKTOP-G3J6LO3:~/projects$ git remote add origin https://github.com/yoga9137/E1-1.git
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$ git branch -M main
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$ git remote add origin https://github.com/yoga9137/E1-1.git
 ```
 
 ### 8. 연동 증거 스크린샷
@@ -962,9 +962,9 @@ jmhwang@DESKTOP-G3J6LO3:~/projects$ git remote add origin https://github.com/yog
 - .gitignore 에 \*.env, \*.key 추가하여 재발생 예방
 
 ```bash
-jmhwang@DESKTOP-G3J6LO3:~/projects$ cd evidence/logs/
-jmhwang@DESKTOP-G3J6LO3:~/projects/evidence/logs$ grep -ri -E "password|passwd|token|secret|api.?key|private key" .
-jmhwang@DESKTOP-G3J6LO3:~/projects/evidence/logs$
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$ cd evidence/logs/
+jmhwang@DESKTOP-G3J6LO3:~/E1-1/evidence/logs$ grep -ri -E "password|passwd|token|secret|api.?key|private key" .
+jmhwang@DESKTOP-G3J6LO3:~/E1-1/evidence/logs$
 ```
 
 ## 15. 트러블 슈팅 
@@ -1084,12 +1084,12 @@ Git이 안전을 위해 작업을 중단(Aborting)시킨 것.
 
 문제
 ```bash
-jmhwang@DESKTOP-G3J6LO3:~/projects$ git remote add origin https://github.com/yoga9137/E1-1.git
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$ git remote add origin https://github.com/yoga9137/E1-1.git
 error: remote origin already exists.
 ```
 
 원인 가설  
-현재 WSL의 ~/projects 폴더에 이미 origin이라는 이름으로 연결된 깃허브 주소가 존재하기 때문에 발생한 것
+현재 WSL의 ~/E1-1 폴더에 이미 origin이라는 이름으로 연결된 깃허브 주소가 존재하기 때문에 발생한 것
 
 해결  
 
@@ -1119,7 +1119,7 @@ git remote -v
 
 문제
 ```bash
-jmhwang@DESKTOP-G3J6LO3:~/projects$ git push -u origin main
+jmhwang@DESKTOP-G3J6LO3:~/E1-1$ git push -u origin main
 To https://github.com/yoga9137/E1-1.git
  ! [rejected]        main -> main (fetch first)
 error: failed to push some refs to 'https://github.com/yoga9137/E1-1.git'
@@ -1154,7 +1154,7 @@ git push -u origin main
 
 방법 2: 내 WSL 코드로 깃허브 덮어쓰기 (강제 푸시)
 
-만약 현재 깃허브 리포지토리에 들어있는 파일들(README.md, evidence/)이 중요하지 않고, 현재 내 WSL(~/projects)에 있는 파일들로 원격 저장소를 완전히 대체(덮어쓰기)하고 싶다면 강제로 밀어 넣을 수 있음.
+만약 현재 깃허브 리포지토리에 들어있는 파일들(README.md, evidence/)이 중요하지 않고, 현재 내 WSL(~/E1-1)에 있는 파일들로 원격 저장소를 완전히 대체(덮어쓰기)하고 싶다면 강제로 밀어 넣을 수 있음.
 
 ```bash
 # 깃허브 저장소를 내 현재 로컬 코드로 강제 업로드
