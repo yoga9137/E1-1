@@ -31,11 +31,11 @@
 - [x] Docker 이미지 빌드
 - [x] 컨테이너 실행
 - [x] 포트 매핑 접속 확인
-- [ ] 바인드 마운트 변경 반영 확인
-- [ ] Docker 볼륨 영속성 확인
-- [ ] Git 설정
-- [ ] GitHub 저장소 생성 및 push
-- [ ] VSCode GitHub 연동 확인
+- [x] 바인드 마운트 변경 반영 확인
+- [x] Docker 볼륨 영속성 확인
+- [x] Git 설정
+- [x] GitHub 저장소 생성 및 push
+- [x] VSCode GitHub 연동 확인
 
 ## 4. 터미널 기본 조작 로그
 
