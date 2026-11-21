@@ -487,10 +487,10 @@ hcv70714678@GNIA-C202-A02:~/E1-1$
 
 ```bash
 # 백그라운드로 우분투 무한 대기 컨테이너 실행
-hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker run -d --name my-ubuntu ubuntu:latest sleep 3600
+hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker run -dit --name my-u-shell ubuntu:latest /bin/bash
 466ec95831ea1bc9edb0a8822f4599637cb7130bf1305ff2c4faefbdac707da0
 # attach로 접속
-hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker attach my-ubuntu
+hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker attach my-u-shell
 ```
 
 - **관찰 및 주의점:**
@@ -503,11 +503,11 @@ hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker attach my-ubuntu
 
 ```bash
 # 백그라운드로 우분투 무한 대기 컨테이너 실행
-hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker run -d --name my-ubuntu ubuntu:latest sleep 3600
+hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker run -d --name my-u-shell ubuntu:latest /bin/bash
 466ec95831ea1bc9edb0a8822f4599637cb7130bf1305ff2c4faefbdac707da0
 
 # exec로 새로운 bash 셸을 실행하며 접속
-hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker exec -it my-ubuntu /bin/bash
+hcv70714678@GNIA-C202-A02:~/E1-1$ sudo docker exec -it my-u-shell /bin/bash
 root@466ec95831ea:/# ls -l
 ```
 
