@@ -641,7 +641,8 @@ hcv70714678@GNIA-C202-A06:~/E1-1/app$
 ```
 
 \- 브라우저 접속 화면
-![포트매핑화면](./evidence/screenshots/nginx-browser.png)
+![원래화면](./evidence/screenshots/nginx-browser.png)
+![도커빌드후화면](./evidence/screenshots/my-web.png)
 
 ### 🧹 (참고) 실습 후 정리
 
